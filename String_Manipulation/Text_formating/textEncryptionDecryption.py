@@ -5,7 +5,7 @@ def caser_cipher_encrypttion(text, shift):
 
     for char in text.lower():
         if char.isalpha():
-            index = (alphates.index(char) + 3) % 26
+            index = (alphates.index(char) + shift) % 26
             encrypted_text+=alphates[index]
         else:
             encrypted_text+=char
@@ -14,6 +14,7 @@ def caser_cipher_encrypttion(text, shift):
 def case_cipher_decryption(text, shit):
     alphabets = 'abcdefghijklmnopqrstuvwxyz'
     decrypted_text= ''
+    
     for char in text.lower():
         if char.isalpha():
             index = (alphabets.index(char) - shit + 26) % 26
