@@ -10,5 +10,12 @@ def old_macdonald(string: str)-> str:
 
     return new_string
 
+def old_macdonald2(name: str)->str:
+    if len(name) > 3:
+        return name[:3].capitalize() + name[3:].capitalize()
+    else:
+        return "Too short name"
+
 print(old_macdonald('macdonald'))
 print(old_macdonald('bangladesh'))
+print(old_macdonald2("maharishi"))
